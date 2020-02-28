@@ -67,15 +67,15 @@ public class Index {
 	           
 //			List<String> stopWordList = Arrays.asList();
 			
-			CharArraySet stopWordSet = new CharArraySet( stp_wrd_lst, true);
+			CharArraySet stpset = new CharArraySet( stp_wrd_lst, true);
 			
 			Analyzer ana = null;
 			
 			if(anaa == "EnglishAnalyzer") {
-				ana = new EnglishAnalyzer(stopWordSet);
+				ana = new EnglishAnalyzer(stpset);
 			}
 			else if(anaa == "StandardAnalyzer") {
-				ana = new StandardAnalyzer(stopWordSet);
+				ana = new StandardAnalyzer(stpset);
 			}
 			
 			IndexWriterConfig iwc = new IndexWriterConfig(ana);
